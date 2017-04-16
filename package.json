@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/javeria2/CS460-nut#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "socket.io": "^1.7.3"
   }
