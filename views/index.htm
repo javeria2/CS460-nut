@@ -1,9 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>IRC&copy;</title>
+	<title>Nutsack Chatroom</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<link rel="stylesheet" href="./views/index.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif|Ubuntu" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="../app.js"></script>
+    <!-- <script src="./js/controllers.js"></script> -->
 </head>
 <body>
-	<h1>Sup bruh?</h1>
+	<h1 id = "main_title">Nutsack Chatroom</h1>
+	<div class="row">
+		<div class = "col m2"></div>
+		<div class="col s12 m3 " id = "create_card">
+			<h1 id = "create_header">CREATE</h1>
+			<p id = "create_descp">Create your own Nutsack chatroom! <br>It's safe as fuck.</p>
+			<img id = "create_img" src="../images/create.png">
+			<div>
+				<a href="#create_modal" class = "modal-trigger waves-effect waves-light" id = "create_btn">Create a Nutsack</a>
+			</div>
+		</div>
+		<div class = "col m2"></div>
+		<div class="col s12 m3 " id = "join_card">
+			<h1 id = "join_header">JOIN</h1>
+			<p id = "join_descp">Join a Nutsack chatroom! <br>It's safe as fuck too.</p>
+			<img id = "join_img" src="../images/join.png">
+			<div>
+				<a class = "waves-effect waves-light" id = "join_btn">Join a Nutsack</a>
+			</div>
+		</div>
+		<div class = "col m2"></div>
+	</div>
+	<!-- Modal div -->
+	<div id="create_modal" class="modal">
+		<div class="modal-content">
+			<h4>Modal Header</h4>
+			<p>A bunch of text</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+		// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+			$('.modal').modal();
+		});
+	</script>
 </body>
 </html>
