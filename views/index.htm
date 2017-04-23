@@ -2,8 +2,40 @@
 <html>
 <head>
 	<title>IRC&copy;</title>
+	<style type="text/css">
+		#chat {
+			height: 500px;
+		}	
+	</style>
 </head>
 <body>
 	<h1>Sup bruh?</h1>
+	<div id="chat"></div>
+	<form id="send-msg">
+		<input type="text" size="35" id="message">
+		<input type="submit">
+	</form>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		var socket = io.connect();
+
+  		var $messageForm = $('#send-msg');
+  		var $messageBox = $('#message');
+  		var $chat = $('#chat');
+
+  		$messageForm.submit(function(event) {
+  			event.preventDefault();
+  			socket.emit('send message', $messageBox.val());
+  			$messageBox.val('');
+  		});
+
+  		socket.on('new message', function(data){
+  			$chat.append(data + "<br/>");
+  		});
+  	});
+  </script>
 </body>
 </html>
