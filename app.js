@@ -19,10 +19,9 @@ app.get('/chat', function(req, res){
 io.sockets.on('connection', function(socket){
 	socket.on('send message', function(data){
 		io.sockets.emit('new message', data);
-	});	
+	});
 });
 
 server.listen(8080, function(){
 	console.log('server started on port ' + 8080);
 });
-
