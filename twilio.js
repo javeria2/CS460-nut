@@ -1,12 +1,11 @@
-var twilio = require('twilio');
-var speakeasy = require('speakeasy');
+var twilio      = require('twilio');
+var speakeasy   = require('speakeasy');
+var credential  =  require('./auth');
 
-var accountSid = 'x'; // Your Account SID from www.twilio.com/console
-var authToken = 'x';   // Your Auth Token from www.twilio.com/console
+var accountSid = credential.accountSid(); // Your Account SID from www.twilio.com/console
+var authToken = credential.authToken();   // Your Auth Token from www.twilio.com/console
 
 var client = twilio(accountSid, authToken);
-
-
 
 var secret = speakeasy.generateSecret({length: 20});
 
