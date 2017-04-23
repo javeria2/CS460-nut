@@ -5,7 +5,7 @@ var express    = require('express'),
     io         = require('socket.io').listen(server);
 
 app.use(bodyparser.urlencoded({extended: true}));
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 app.engine('htm', require('ejs').renderFile);
 
 app.get('/', function(req, res){
