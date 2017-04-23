@@ -5,6 +5,6 @@ String.prototype.hashCode() = function(){
       char = this.charCodeAt(i);
       hash = ((hash << 5) - hash) + char;
       hash |= 0;
-  }
+  }  
   return hash;
 };
