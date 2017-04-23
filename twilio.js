@@ -1,8 +1,8 @@
 var twilio = require('twilio');
 var speakeasy = require('speakeasy');
 
-var accountSid = 'AC34479a70c954123a2cb3b8ad7db79b57'; // Your Account SID from www.twilio.com/console
-var authToken = '18b312b63cc79ba1ff22f73e5477bfd0';   // Your Auth Token from www.twilio.com/console
+var accountSid = 'x'; // Your Account SID from www.twilio.com/console
+var authToken = 'x';   // Your Auth Token from www.twilio.com/console
 
 var client = twilio(accountSid, authToken);
 
