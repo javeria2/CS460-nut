@@ -7,6 +7,17 @@ create secure chatroom.
 in set time.
 - Msgs from the chatrooms will be encrypted
 
+## Create Room
+- Generates a random number as a key to be passed into the hash function. Hashed value
+will be the URL endpoint
+
+## Join Room
+- Get key in some fashion (email, text, pigeon carrier, ur mom, etc)
+- Pass key to hash
+- Hash function will then send IP (?)
+- Hash function will send request to Twilio API and user will have 60 seconds to type in
+key for two factor auth
+
 > not goign to lie... i forgot alot about our meeting...
 > i only added what i remembered... rawr~ O.o
 
