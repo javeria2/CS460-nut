@@ -1,0 +1,84 @@
+#main_title {
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+#create_card{
+	border-color: #1FDA9A;
+	background-color: white;
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 20px;
+}
+
+#create_header {
+	font-family: 'Ubuntu', sans-serif;
+	color: #1FDA9A;
+	text-align: center;
+}
+
+#create_descp {
+	color: #B7B8B6;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+}
+
+#create_img {
+	height: 300px;
+	padding: 10px;
+    display: block;
+	margin: 10px auto;
+}
+
+#create_btn {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 25px;
+	color: white;
+	padding-top: 20px;
+	display : block;
+	text-align: center;
+	background-color: #1FDA9A;
+	border-radius: 10px;
+	margin: 0px 40px 10px 40px;
+	padding: 15px 0 15px 0;
+}
+
+#join_card{
+	border-color: #03A9F4;
+	background-color: white;
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 20px;
+}
+
+#join_header {
+	font-family: 'Ubuntu', sans-serif;
+	color: #03A9F4;
+	text-align: center;
+}
+
+#join_descp {
+	color: #B7B8B6;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+}
+
+#join_img {
+	height: 300px;
+	padding: 40px;
+    display: block;
+	margin: 10px auto;
+}
+
+#join_btn {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 25px;
+	color: white;
+	padding-top: 20px;
+	display : block;
+	text-align: center;
+	background-color: #03A9F4;
+	border-radius: 10px;
+	margin: 0px 40px 10px 40px;
+	padding: 15px 0 15px 0;
+}
