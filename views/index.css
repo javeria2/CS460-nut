@@ -82,3 +82,21 @@
 	margin: 0px 40px 10px 40px;
 	padding: 15px 0 15px 0;
 }
+
+#create_modal {
+	border-radius: 10px;
+	border-radius: 10px;
+	border-color: #1FDA9A;
+	border-style: solid;
+}
+
+#join_modal {
+	border-radius: 10px;
+	border-radius: 10px;
+	border-color: #03A9F4;
+	border-style: solid;
+}
+.input-field label {
+     color: #B7B8B6;
+ }
+

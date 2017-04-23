@@ -28,21 +28,43 @@
 			<p id = "join_descp">Join a Nutsack chatroom! <br>It's safe as fuck too.</p>
 			<img id = "join_img" src="../images/join.png">
 			<div>
-				<a class = "waves-effect waves-light" id = "join_btn">Join a Nutsack</a>
+				<a href = "#join_modal" class = "waves-effect waves-light" id = "join_btn">Join a Nutsack</a>
 			</div>
 		</div>
 		<div class = "col m2"></div>
 	</div>
-	<!-- Modal div -->
+	<!-- Create Modal div -->
 	<div id="create_modal" class="modal">
 		<div class="modal-content">
-			<h4>Modal Header</h4>
-			<p>A bunch of text</p>
+			<h1 id = "create_header" style = "font-size: 25px;">Create your Nutsack</h1>
+			<div class="input-field col s6">
+				<input id="first_name2" type="text" class="validate">
+				<label class="active" for="first_name2">Name your Nutsack</label>
+			</div>
 		</div>
 		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+			<div>
+				<a href="#!" style = "margin: 0px 300px 20px 300px; padding: 5px 0 5px 0;" id = "create_btn" class="modal-action modal-close waves-effect">Create</a>
+			</div>
 		</div>
 	</div>
+
+	<div id="join_modal" class="modal">
+		<div class="modal-content">
+			<h1 id = "join_header" style = "font-size: 25px;">Join a Nutsack</h1>
+			<p style = "text-align: center; color: #B7B8B6;" >Each Nutsack has its own unique key. <br> Key must be provided in order to join a Nutsack.</p>
+			<div class="input-field col s6">
+				<input id="first_name2" type="text" class="validate">
+				<label class="active" for="first_name2">Nutsack key</label>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<div>
+				<a href="#!" style = "margin: 0px 300px 20px 300px; padding: 5px 0 5px 0;" id = "join_btn" class="modal-action modal-close waves-effect">Join</a>
+			</div>
+		</div>
+	</div>
+
 	<script>
 		$(document).ready(function(){
 		// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
