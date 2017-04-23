@@ -12,6 +12,10 @@ app.get('/', function(req, res){
 	res.render('index.htm');
 });
 
+app.get('/chat', function(req, res){
+	res.render('chat.htm');
+});
+
 io.sockets.on('connection', function(socket){
 	socket.on('send message', function(data){
 		io.sockets.emit('new message', data);
