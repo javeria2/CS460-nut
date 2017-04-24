@@ -26,6 +26,9 @@ key for two factor auth
 - encryption for the chatroom
 - make secure chatroom requests
 
+### If time permits..
+- Fetch the IP address and register on the backend whenever someone is verified by our system (through twilio).
+- If the url is hit manually by an IP which is not registered, redirect to the homepage.
 
 ### License
 CS 460... group?
