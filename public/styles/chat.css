@@ -1,0 +1,38 @@
+#chat {
+    height: 500px;
+    border-color: #03A9F4;
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px 10px 15px 10px;
+}
+
+#title {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px 0 15px 0;
+    color: #03A9F4;
+}
+
+#icon {
+    padding: 15px 10px 15px 10px;
+    float: left;
+}
+
+#send-msg {
+    padding: 15px 10px 15px 10px;
+}
+
+#icon {
+    padding: 15px 0 15px 0;
+}
+
+#top {
+    border-color: #03A9F4;
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 15px 10px 15px 10px;
+}
