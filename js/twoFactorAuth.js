@@ -7,7 +7,7 @@ module.exports = {
 
         var token = speakeasy.totp({
           secret: secret.base32,
-          encoding: 'base32',
+          encoding: 'base32'
         });
 
         client.sendMessage({
@@ -30,4 +30,4 @@ module.exports = {
         console.log(verified);
         return verified;
     }
-}
+};
