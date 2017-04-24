@@ -6,14 +6,13 @@ var express    = require('express'),
     io         = require('socket.io').listen(server),
     init       = require("./routes/init"),
     chat       = require("./routes/chat"),
-    twilio     = require('twilio'),
     speakeasy  = require('speakeasy'),
-    // credential = require('./cred'),
-    twoFactorAuth = require('./twoFactorAuth.js');
+    twoFactorAuth = require('./js/twoFactorAuth');
 
 //config
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/js'));
 app.engine('htm', require('ejs').renderFile);
 
 // ==============
