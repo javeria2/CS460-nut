@@ -1,3 +1,5 @@
 node_modules/
 .app-sublime-workspace
 cred.js
+.idea/
+.DS_Store
