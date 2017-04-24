@@ -5,7 +5,7 @@ var express    = require('express'),
     io         = require('socket.io').listen(server),
     twilio     = require('twilio'),
     speakeasy  = require('speakeasy'),
-    credential = require('./cred'),
+    // credential = require('./cred'),
     twoFactorAuth = require('./twoFactorAuth.js');
 
 app.use(bodyparser.urlencoded({extended: true}));
@@ -13,10 +13,10 @@ app.use(express.static(__dirname + '/public'));
 app.engine('htm', require('ejs').renderFile);
 
 app.get('/', function(req, res){
-    var secret  = twoFactorAuth.startAuth(credential.accountSid(),
-                         credential.authToken(),
-                         twilio,
-                         speakeasy);
+    // var secret  = twoFactorAuth.startAuth(credential.accountSid(),
+    //                      credential.authToken(),
+    //                      twilio,
+    //                      speakeasy);
     // twoFactorAuth.authenticateToken(speakeasy, tokenAndSecret[0], tokenAndSecret[1]);
 	res.render('index.htm');
 });
