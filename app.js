@@ -23,9 +23,14 @@ app.use(init);
 app.use('/chat', chat);
 
 io.sockets.on('connection', function(socket){
+
+    socket.on('subscribe', function(room) {
+        console.log('joining room', room);
+        socket.join(room);
+    });
+
 	socket.on('send message', function(data){
-		io.sockets.emit('new message', data);
-		console.log(data);
+		io.sockets.in(data.room).emit('new message', data.message);
 	});
 });
 
