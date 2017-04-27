@@ -1,19 +1,16 @@
 //dependencies
-var express    = require('express'),
-    bodyparser = require("body-parser"),
-    app        = express(),
-    server     = require('http').createServer(app),
-    io         = require('socket.io').listen(server),
-    init       = require("./routes/init"),
-    chat       = require("./routes/chat"),
-    speakeasy  = require('speakeasy'),
-    twoFactorAuth = require('./js/twoFactorAuth');
+var express       = require('express'),
+    app           = express(),
+    server        = require('http').createServer(app),
+    io            = require('socket.io').listen(server),
+    init          = require("./routes/init"),
+    chat          = require("./routes/chat"),
+    speakeasy     = require('speakeasy'),
+    twoFactorAuth = require('./js/twoFactorAuth'),
+    config        = require('./utils/config');
 
 //config
-app.use(bodyparser.urlencoded({extended: true}));
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/js'));
-app.engine('htm', require('ejs').renderFile);
+new config(app);
 
 // ==============
 // ROUTES BEGIN
