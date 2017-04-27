@@ -3,7 +3,7 @@
 var router = require("express").Router({mergeParams: true});
 
 router.get('/', function(req, res){
-	res.render('chat.htm');
+	res.render('chat.ejs');
 });
 
 module.exports = router;

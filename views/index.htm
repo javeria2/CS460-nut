@@ -84,24 +84,27 @@
 
 	<!-- Create modal -->
 	<div id="create_modal" class="modal">
-		<div class="modal-content">
-			<h1 id = "create_header" style = "font-size: 25px;">Create your Nutsack</h1>
-			<p style = "text-align: center; color: #B7B8B6;" >Give your chatroom a name.</p>
-			<div class="row">
-				<div class="col s3"></div>
-				<div class="input-field col s6">
-					<input id="nutsack_name" type="text" class="validate">
-					<label class="active" for="nutsack_name">Name your Nutsack</label>
+		<form action="/hihihi" method="POST">	
+			<div class="modal-content">
+				<h1 id = "create_header" style = "font-size: 25px;">Create your Nutsack</h1>
+				<p style = "text-align: center; color: #B7B8B6;" >Give your chatroom a name.</p>
+				<div class="row">
+					<div class="col s3"></div>
+					<div class="input-field col s6">
+							<input id="nutsack_name" type="text" name="chatroom[name]" class="validate">
+							<label class="active" for="nutsack_name">Name your Nutsack</label>
+					</div>
+					<div class="col s3"></div>
 				</div>
-				<div class="col s3"></div>
 			</div>
-		</div>
-		<div class="modal-footer">
-			<div>
-				<a href="#!" style = "margin: 0px 300px 20px 300px; padding: 5px 0 5px 0;" id = "create_btn" class="modal-action modal-close waves-effect">Create</a>
+			<div class="modal-footer">
+				<div>
+					<!-- <a href="#!" style = "margin: 0px 300px 20px 300px; padding: 5px 0 5px 0;" id = "create_btn" class="modal-action modal-close waves-effect">Create</a> -->
+					<button style = "margin: 0px 300px 20px 300px; padding: 5px 0 5px 0;" id = "create_btn" class="modal-action modal-close waves-effect">Create</button>
+				</div>
 			</div>
-		</div>
-		<div class="section"></div>
+			<div class="section"></div>
+		</form>
 	</div>
 
 	<!-- join modal -->
@@ -129,7 +132,7 @@
 	<script>
 		$(document).ready(function(){
 		// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-			$('.modal').modal();
+			$('.modal').modal();	
 		});
 	</script>
 </body>

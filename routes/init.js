@@ -6,4 +6,8 @@ router.get('/', function(req, res){
 	res.render('index.htm');
 });
 
+router.post('/hihihi', function(req, res){
+	res.render('chat.ejs', {chatroom: req.body.chatroom});
+});	
+
 module.exports = router;
