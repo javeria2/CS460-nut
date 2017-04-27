@@ -7,4 +7,6 @@ var password = generator.generate({
     strict: true
 });
 
-console.log(password);
+// console.log(password);
+
+module.exports = password;
