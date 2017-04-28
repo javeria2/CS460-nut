@@ -1,24 +1,39 @@
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #044f48, #2a7561);
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+
 #chat {
-    height: 500px;
-    border-color: #03A9F4;
-    background-color: white;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 20px;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 15px 10px 15px 10px;
-    overflow-y: auto;
+  max-width: 40%;
+  height: 700px;
+  border-color: #03A9F4;
+  background-color: rgba(22,29,41, 0.6);
+  font-family: 'Ubuntu', sans-serif;
+  padding: 15px 10px 15px 10px;
+  overflow-y: auto;
+  border-bottom-right-radius:2em;
+  border-bottom-left-radius:2em;
 }
 
 #title {
     font-family: 'Ubuntu', sans-serif;
-    padding: 15px 0 15px 0;
+    margin: 0;
     color: #03A9F4;
-}
-
-#icon {
-    padding: 15px 10px 15px 10px;
-    float: left;
 }
 
 #send-msg {
@@ -27,13 +42,24 @@
 
 #icon {
     padding: 15px 0 15px 0;
+    float: left;
 }
 
 #top {
-    border-color: #03A9F4;
-    background-color: white;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 20px;
-    padding: 15px 10px 15px 10px;
+  max-width: 40%;
+  border-top-left-radius:2em;
+  border-top-right-radius:2em;
+  background-color: rgba(18,24,34,0.7);
+  padding: 0px 10px 15px 10px;
 }
+
+.bg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url('https://images.unsplash.com/photo-1451186859696-371d9477be93?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925') no-repeat 0 0;
+  filter: blur(80px);
+}
+

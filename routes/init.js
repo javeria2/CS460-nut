@@ -5,6 +5,8 @@ var router   = require("express").Router({mergeParams: true}),
 
 var chatroom;
 var genPassword;
+var user;
+var image;
 
 router.get('/', function(req, res){
 	res.render('index.htm');
@@ -12,11 +14,16 @@ router.get('/', function(req, res){
 
 router.get('/chat/:password', function(req, res){
 	res.render('chat.ejs', {chatroom: chatroom, 
-							password: genPassword});
+							password: genPassword,
+							username: user,
+						    image: image});
 });
 
 router.post('/chat', function(req, res){
 	chatroom = req.body.chatroom;
+	user = req.body.username;
+	var rand = Math.floor(Math.random() * 10) + 1;
+	image = "/images/" + rand + ".png";
 	genPassword = password();
 	res.redirect('/chat/' + genPassword);
 });

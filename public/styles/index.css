@@ -41,6 +41,8 @@
 	border-radius: 10px;
 	margin: 0px 40px 10px 40px;
 	padding: 15px 0 15px 0;
+	outline: 0;
+	border: 0;
 }
 
 #join_card{
@@ -99,4 +101,6 @@
 .input-field label {
      color: #B7B8B6;
  }
+
+
 

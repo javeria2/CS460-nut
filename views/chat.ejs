@@ -3,25 +3,43 @@
 <head>
 	<title>IRC&copy;</title>
 	<link rel="stylesheet" href="/styles/chat.css">
-</head>
-<body>
-	<div id="top">
-		<img id = "icon" src="/images/join.png" width="5%" height="5%">
-		<h1 id="title"><%= chatroom.name %></h1>
-
-	</div>
-	<div id="chat"></div>
-	<form id="send-msg">
-		<input type="text" size="35" id="message">
-		<input type="submit">
-	</form>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+  <!-- materialize js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+
+  <!-- materialize css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+</head>
+<body>
+  <div class="section"></div>
+  <div class="section"></div>
+
+  <div class="container">
+
+  	<div id="top" style="margin: 0 auto;">
+  		<img id = "icon" src="<%= image %>" width="5%" height="5%">
+  		<h1 id="title"><%= chatroom.name %></h1>
+  	</div>
+  	<div id="chat" style="margin: 0 auto;"></div>
+
+  	<form id="send-msg">
+  		<input type="text" size="35" id="message">
+  		<input type="submit">
+  	</form>
+  </div>
+
+  <div class="bg"></div>
+
+
   <script type="text/javascript" src="/socket.io/socket.io.js"></script>
   <script type="text/javascript">
   	$(document).ready(function() {
   		var socket = io.connect();
       var password = "<%= password %>";
+      var username = "<%= username %>";
 
       //subscribe to a channel
       socket.emit('subscribe', password);
@@ -34,14 +52,15 @@
   			event.preventDefault();
   			socket.emit('send message', {
                                     message: $messageBox.val(),
-                                    room: password
+                                    room: password,
+                                    username: username
                                     });
 
   			$messageBox.val('');
   		});
-      
+
   		socket.on('new message', function(data){
-  			$chat.append(data + "<br/>");
+  			$chat.append(data.username + " " + data.message + "<br/>");
   		});
   	});
   </script>
