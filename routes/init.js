@@ -13,7 +13,7 @@ router.get('/', function(req, res){
 });
 
 router.get('/chat/:password', function(req, res){
-	res.render('chat.ejs', {chatroom: chatroom, 
+	res.render('chat.ejs', {chatroom: chatroom,
 							password: genPassword,
 							username: user,
 						    image: image});
@@ -26,6 +26,10 @@ router.post('/chat', function(req, res){
 	image = "/images/" + rand + ".png";
 	genPassword = password();
 	res.redirect('/chat/' + genPassword);
+});
+
+router.get('/denied', function(req, res) {
+		res.render('denied.htm');
 });
 
 module.exports = router;
