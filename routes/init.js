@@ -13,19 +13,34 @@ router.get('/', function(req, res){
 });
 
 router.get('/chat/:password', function(req, res){
-	res.render('chat.ejs', {chatroom: chatroom, 
-							password: genPassword,
+	res.render('chat.ejs', { password: genPassword,
 							username: user,
 						    image: image});
 });
 
 router.post('/chat', function(req, res){
-	chatroom = req.body.chatroom;
+
+	console.log(":helllooooooo???");
+	var btn_pressed = req.body.post_btn;
 	user = req.body.username;
 	var rand = Math.floor(Math.random() * 10) + 1;
 	image = "/images/" + rand + ".png";
-	genPassword = password();
-	res.redirect('/chat/' + genPassword);
+	console.log("hello there");
+
+	if(btn_pressed == "Join"){
+		console.log("joined");
+		var nutsack_key = req.body.key;
+		console.log(nutsack_key);
+		res.redirect('/chat/' + nutsack_key);
+	}else{
+		console.log("created");
+		genPassword = password();
+		res.redirect('/chat/' + genPassword);
+	}
+});
+
+router.get('/denied', function(req, res) {
+		res.render('denied.htm');
 });
 
 module.exports = router;

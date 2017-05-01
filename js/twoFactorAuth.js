@@ -1,5 +1,8 @@
 module.exports = {
-
+    // accountSid: sid from cred.js used for twilio api
+    // authToken: token from cred.js used for twilio api
+    // twilio: twilio module passed in from main app
+    // speakeasy: speakeasy 2factorauth module passed in from main app
     startAuth: function(accountSid, authToken, twilio, speakeasy) {
 
         var client = twilio(accountSid, authToken);
