@@ -87,11 +87,10 @@
 		<form action="/chat" method="POST">	
 			<div class="modal-content">
 				<h1 id = "create_header" style = "font-size: 25px;">Create your Nutsack</h1>
-				<p style = "text-align: center; color: #B7B8B6;" >Give your chatroom a name.</p>
+				<p style = "text-align: center; color: #B7B8B6;" >Give us your name.</p>
 				<div class="row">
 					<div class="col s3"></div>
 					<div class="input-field col s6">
-							<input id="nutsack_name" type="text" name="chatroom[name]" class="validate" placeholder="Name your Nutsack">
 							<input id="user_name" type="text" name="username" class="validate" placeholder="What's your name?">
 					</div>
 					<div class="col s3"></div>
@@ -101,7 +100,7 @@
 				<div class="row">
 					<div class="col s4"></div>
 					<div class="col s4">
-						<button id = "create_btn" style="margin: 0 auto; padding: 10px" class="modal-action modal-close waves-effect">Create</button>
+						<input type = "submit" name = "post_btn" value = "Create" id = "create_btn" class="modal-action modal-close waves-effect">
 					</div>
 					<div class="col s4"></div>
 
@@ -113,7 +112,32 @@
 
 	<!-- join modal -->
 	<div id="join_modal" class="modal">
-		<div class="modal-content">
+		<form action="/chat" method="POST">	
+			<div class="modal-content">
+				<h1 id = "join_header" style = "font-size: 25px;">Join a Nutsack</h1>
+				<p style = "text-align: center; color: #B7B8B6;" >Enter a Nutsack key.</p>
+				<div class="row">
+					<div class="col s3"></div>
+					<div class="input-field col s6">
+							<input id="nutsack_key" type="text" name="key" class="validate" placeholder="Nutsack Key">
+							<input id="user_name" type="text" name="username" class="validate" placeholder="What's your name?">
+					</div>
+					<div class="col s3"></div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col s4"></div>
+					<div class="col s4">
+						<input type = "submit" name = "post_btn" value = "Join" id = "join_btn" class="modal-action modal-close waves-effect">
+					</div>
+					<div class="col s4"></div>
+
+				</div>
+			</div>
+			<div class="section"></div>
+		</form>
+		<!-- <div class="modal-content">
 			<h1 id = "join_header" style = "font-size: 25px;">Join a Nutsack</h1>
 			<p style = "text-align: center; color: #B7B8B6;" >Each Nutsack has its own unique key. <br> Key must be provided in order to join a Nutsack.</p>
 			<div class="row">
@@ -130,7 +154,7 @@
 				<a href="#!" style = "margin: 0px 300px 20px 300px; padding: 5px 0 5px 0;" id = "join_btn" class="modal-action modal-close waves-effect">Join</a>
 			</div>
 		</div>
-		<div class="section"></div>
+		<div class="section"></div> -->
 	</div>
 
 	<script>
