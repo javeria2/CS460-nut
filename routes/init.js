@@ -39,4 +39,8 @@ router.post('/chat', function(req, res){
 	}
 });
 
+router.get('/denied', function(req, res) {
+		res.render('denied.htm');
+});
+
 module.exports = router;
