@@ -90,7 +90,8 @@ app.post('/chat', function(req, res){
 		var secret = twoFactorAuth.startAuth(cred.accountSid(),
 											 cred.authToken(),
 											 twilio,
-											 speakeasy);
+											 speakeasy,
+                                             req.body.phone);
 		app.set('gen', genPassword);
 		app.set('secret', secret);
 

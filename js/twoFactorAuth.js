@@ -3,7 +3,7 @@ module.exports = {
     // authToken: token from cred.js used for twilio api
     // twilio: twilio module passed in from main app
     // speakeasy: speakeasy 2factorauth module passed in from main app
-    startAuth: function(accountSid, authToken, twilio, speakeasy) {
+    startAuth: function(accountSid, authToken, twilio, speakeasy, phone) {
 
         var client = twilio(accountSid, authToken);
         var secret = speakeasy.generateSecret({length: 20});
@@ -15,7 +15,7 @@ module.exports = {
 
         client.sendMessage({
             body: token,
-            to: "+18057980216",
+            to: phone.toString(),
             from: "+18053035298"
         });
 
