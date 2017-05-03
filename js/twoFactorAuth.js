@@ -8,9 +8,10 @@ module.exports = {
         var client = twilio(accountSid, authToken);
         var secret = speakeasy.generateSecret({length: 20});
 
-        var token = speakeasy.totp({
+        var token = speakeasy.hotp({
           secret: secret.base32,
-          encoding: 'base32'
+          encoding: 'base32',
+          counter: 123
         });
 
         client.sendMessage({
@@ -20,17 +21,24 @@ module.exports = {
         });
 
         console.log(token);
+        console.log(secret);
         return secret;
     },
 
     authenticateToken: function(speakeasy, token, secret) {
-        var verified = speakeasy.totp.verify({
+        console.log("---------");
+        console.log(token);
+        console.log(secret);
+        console.log("---------");
+
+        var verified = speakeasy.hotp.verify({
           secret: secret.base32,
           encoding: 'base32',
-          token: token
+          token: token,
+          counter: 123
         });
 
-        // console.log(verified);
+        console.log(verified);
         return verified;
     }
 };
