@@ -30,7 +30,7 @@ module.exports = {
           token: token
         });
 
-        console.log(verified);
+        // console.log(verified);
         return verified;
     }
 };

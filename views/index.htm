@@ -63,7 +63,7 @@
 			<h1 id = "join_header">JOIN</h1>
 			<p id = "join_descp">Join a Nutsack chatroom!</p>
 			<div class="section">
-			<div class="section"></div>			
+			<div class="section"></div>
 				<div class="col s12 m4"></div>
 				<div class="col s12 m4 center">
 					<i class="icon-sign-in" style="font-size: 6rem;"></i>
@@ -84,7 +84,7 @@
 
 	<!-- Create modal -->
 	<div id="create_modal" class="modal">
-		<form action="/chat" method="POST">	
+		<form action="/chat" method="POST">
 			<div class="modal-content">
 				<h1 id = "create_header" style = "font-size: 25px;">Create your Nutsack</h1>
 				<p style = "text-align: center; color: #B7B8B6;" >Give us your name.</p>
@@ -112,7 +112,7 @@
 
 	<!-- join modal -->
 	<div id="join_modal" class="modal">
-		<form action="/chat" method="POST">	
+		<form action="/chat" method="POST">
 			<div class="modal-content">
 				<h1 id = "join_header" style = "font-size: 25px;">Join a Nutsack</h1>
 				<p style = "text-align: center; color: #B7B8B6;" >Enter a Nutsack key.</p>
@@ -121,6 +121,7 @@
 					<div class="input-field col s6">
 							<input id="nutsack_key" type="text" name="key" class="validate" placeholder="Nutsack Key">
 							<input id="user_name" type="text" name="username" class="validate" placeholder="What's your name?">
+							<!-- <input id="twoFactor" type="text" name="twoFactor" class="validate" placeholder="2 Factor Auth"> -->
 					</div>
 					<div class="col s3"></div>
 				</div>
@@ -160,7 +161,7 @@
 	<script>
 		$(document).ready(function(){
 		// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-			$('.modal').modal();	
+			$('.modal').modal();
 		});
 	</script>
 </body>

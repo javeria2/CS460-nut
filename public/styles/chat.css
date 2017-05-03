@@ -20,7 +20,7 @@ body {
 
 #chat {
   max-width: 40%;
-  height: 700px;
+  height: 300px;
   border-color: #03A9F4;
   background-color: rgba(22,29,41, 0.6);
   font-family: 'Ubuntu', sans-serif;
@@ -62,4 +62,3 @@ body {
   background: url('https://images.unsplash.com/photo-1451186859696-371d9477be93?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925') no-repeat 0 0;
   filter: blur(80px);
 }
-

@@ -18,9 +18,11 @@
   "homepage": "https://github.com/javeria2/CS460-nut#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "crypto-js": "^3.1.9-1",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "generate-password": "^1.3.0",
+    "ip": "^1.1.5",
     "socket.io": "^1.7.1",
     "speakeasy": "^2.0.0",
     "twilio": "^2.11.1"
