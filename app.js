@@ -43,7 +43,6 @@ io.sockets.on('connection', function(socket){
 // START THE SERVER
 // ================
 server.listen(8080, function(){
-    // console.dir ( ip.address() );
 
     //encrypt
     var ciphertext = crypt.AES.encrypt(JSON.stringify({'key': '1234'}), 'secret key 123');
