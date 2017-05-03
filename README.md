@@ -17,9 +17,9 @@
 - Hash function will send request to Twilio API and user will have 30 seconds to type in key (received by SMS) for two factor auth.
 
 ## Tech Stack
-- Node.js and Express for the server.
-- Socket.io to utilize web sockets to make private chat rooms.
-- Twilio API for SMS verification.
+- ```Node.js``` and ```Express``` for the server.
+- ```Socket.io``` to utilize web sockets to make private chat rooms.
+- ```Twilio API``` for SMS verification.
 
 > Feel free to look at our commit history to see the contributions made by each team member.
 
