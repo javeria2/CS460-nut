@@ -23,7 +23,10 @@
       <span><%= username %></span>
   		<img id = "icon" src="<%= image %>" width="5%" height="5%">
   	</div>
-  	<div id="chat" ></div>
+    <div class="chat">
+        <div class="dummy"></div>
+    </div>
+  	<!-- <div id="chat" ></div> -->
 
   	<form id="send-msg">
   		<input type="text" size="35" id="message">
@@ -46,9 +49,8 @@
 
   		var $messageForm = $('#send-msg');
   		var $messageBox = $('#message');
-  		var $chat = $('#chat');
-      console.log(password);
-      console.log(username);
+  		var $chat = $('.chat');
+      
   		$messageForm.submit(function(event) {
   			event.preventDefault();
   			socket.emit('send message', {
@@ -61,7 +63,8 @@
   		});
 
   		socket.on('new message', function(data){
-  			$chat.append(data.username + " " + data.message + "<br/>");
+  			$("<div class=\"add-msg\">" + "<h6 style=\"color: orange;\">" + data.username + "</h6>" + data.message + "<div/>").insertBefore('.dummy');
+        $('.chat').scrollTop($('.add-msg')[0].scrollHeight);
   		});
   	});
   </script>
