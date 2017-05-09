@@ -20,7 +20,7 @@
 - ```Node.js``` and ```Express``` for the server.
 - ```Socket.io``` to utilize web sockets to make private chat rooms.
 - ```Twilio API``` for SMS verification.
-
+(If text does not send properly, just look at the console, 2 Factor Key is printed there)
 > Feel free to look at our commit history to see the contributions made by each team member.
 
 ## Installation
